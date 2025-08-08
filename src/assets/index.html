@@ -4,127 +4,2602 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>RSSB</title>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> -->
     <link rel="stylesheet" href="/css/style.css" />
-    <link rel="shortcut icon" href="/src/rssb-cut-logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="/src/assets/rssb-cut-logo.png" type="image/x-icon">
   </head>
   <body>
-       <header class="shadow-sm">
-        <!-- Top Bar: Socials and Publications -->
-        <nav class="bg-blue-100 p-4 md:px-8 border-b border-gray-200">
-            <div class="container mx-auto flex flex-col md:flex-row items-center justify-between">
-                <!-- Social Media Icons -->
-                <div class="flex items-center space-x-4 mb-4 md:mb-0 text-blue-900">
-                    <a href="#" class="hover:text-blue-500 transition-colors duration-200" aria-label="LinkedIn">
-                        <img src="rssb-cut-logo" alt="">
-                    </a>
-                    <a href="#" class="hover:text-blue-500 transition-colors duration-200" aria-label="Twitter">
-                        <img src="/src/assets/public 2.svg" class="w-5 h-5" alt="">
-                    </a>
-                    <a href="#" class="hover:text-blue-500 transition-colors duration-200" aria-label="Facebook">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-facebook"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
-                    </a>
-                    <a href="#" class="hover:text-blue-500 transition-colors duration-200" aria-label="Instagram">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37a4 4 0 1 1-4.73-4.73A4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
-                    </a>
-                </div>
-
-                <!-- Online Services & Publications -->
-                <div class="relative flex items-center space-x-6 text-sm text-blue-900">
-                    <div class="relative">
-                        <button id="online-services-btn" class="flex items-center space-x-1 font-semibold rounded-md p-2 hover:bg-gray-100 transition-colors duration-200">
-                            <span>Online Services</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down"><path d="m6 9 6 6 6-6"/></svg>
-                        </button>
-                        <!-- Dropdown Menu -->
-                        <div id="online-services-dropdown" class="hidden absolute right-0 mt-2 w-48 bg-white border border-gray-200 rounded-md shadow-lg z-10">
-                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Service 1</a>
-                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Service 2</a>
-                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Service 3</a>
-                        </div>
-                    </div>
-                    <a href="#" class="font-semibold hover:text-blue-500 transition-colors duration-200">
-                        Publications
-                    </a>
-                </div>
+    <!-- <h1 class="text-2xl text-red-500">Welcome to RSSB Rwanda</h1> -->
+    <div id="__next">
+      <div class="w-full z-100 transition duration-1000 relative">
+        <div id="primary-bar" class="bg-blue-50">
+          <!-- social Icons start here-->
+          <div
+            class="container mx-auto px-3.5 md:px-12 xl:px-30 2xl:px-36 py-2 flex justify-between items-center flex-col lg:flex-row"
+          >
+            <div class="flex justify-center items-center h-8">
+              <a href="#">
+                <img
+                  src="/src/assets/"
+                  class="w-8 h-8 flex justify-center items-center pr-4 border-r last:border-0 border-gray-900"
+                  alt=""
+                />
+              </a>
+              <a href="#">
+                <img
+                  src="/src/assets/Twiter.svg"
+                  class="w-8 h-8 flex justify-center items-center pr-4 border-r last:border-0 border-gray-900"
+                  alt=""
+                />
+              </a>
+              <a href="#">
+                <img
+                  src="/src/assets/facebook.svg"
+                  class="w-8 h-4 flex justify-center items-center pr-4 border-r last:border-0 border-gray-900"
+                  alt=""
+                />
+              </a>
+              <a href="#">
+                <img
+                  src="/src/assets/youtube.svg"
+                  class="w-8 h-8 flex justify-center items-center pr-4 border-r last:border-0 border-gray-900"
+                  alt=""
+                />
+              </a>
+              <a href="#">
+                <img
+                  src="/src/assets/Instagram.svg"
+                  class="w-8 h-8 flex justify-center items-center pr-4 border-r last:border-0 border-gray-900"
+                  alt=""
+                />
+              </a>
             </div>
-        </nav>
-
-        <!-- Middle Bar: Logo and Contact Info -->
-        <div class="container mx-auto p-4 md:px-8 flex flex-col md:flex-row items-center justify-between my-4">
-            <!-- RSSB Logo -->
-            <div class="flex items-center space-x-4 mb-4 md:mb-0">
-                <img src="assets/rssb-cut-logo.png" alt="RSSB Logo" class="h-20 w-20 rounded-full">
-                <div class="flex flex-col text-blue-900">
-                    <span class="font-bold text-xl">RSSB</span>
-                    <span class="text-md">Our Health</span>
-                    <span class="text-md">Our Future</span>
+            <div class="flex mt-4 lg:mt-0 lg:mr-0 flex-row-reverse lg:flex-row">
+              <div
+                class="pl-4 lg:pl-0 lg:pr-4 lg:border-r lg:border-very-low-gray-color"
+              >
+                <div class="dropdown__MainWrap-sc-1c00f61-0 jGIXBC">
+                  <button
+                    class="servicesDropdown__DropDownBtn-sc-buozmr-0 eVudYB flex items-center justify-center focus:outline-none"
+                  >
+                    <span
+                      class="font-segoe-regular text-gray-color text-sm cursor-pointer"
+                      >Online Services</span
+                    ><i class="uc-icon" aria-hidden="true"></i>
+                  </button>
+                  <!-- <div
+                    id="nav-wrap"
+                    class="dropdown__NavItemsWrap-sc-1c00f61-1 khSWHI"
+                  >
+                    <ul class="nav-list">
+                      <li class="nav-list__item flex justify-between">
+                        <span>Apply For Employee Number</span>
+                      </li>
+                      <li class="nav-list__item flex justify-between">
+                        <span>Check For Your Contributions</span>
+                      </li>
+                      <li class="nav-list__item flex justify-between">
+                        <span>Pay Employee Contributions</span>
+                      </li>
+                      <li class="nav-list__item flex justify-between">
+                        <span>RSSB Clearance Certificate</span>
+                      </li>
+                      <li class="nav-list__item flex justify-between">
+                        <span>Kwivuza</span>
+                      </li>
+                    </ul>
+                  </div> -->
                 </div>
+              </div>
+              <div
+                class="lg:pl-4 pr-4 lg:pr-0 border-r lg:border-none border-very-low-gray-color"
+              >
+                <span
+                  class="font-segoe-regular text-gray-color text-sm cursor-pointer"
+                  >Publications</span
+                >
+              </div>
             </div>
-            
-            <!-- Contact Info -->
-            <div class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-8 text-sm text-blue-900">
-                <div class="flex items-center space-x-2 p-3 bg-gray-100 rounded-lg shadow-sm">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone text-blue-600"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                    <div>
-                        <span class="font-semibold text-lg block">4044</span>
-                        <span class="text-gray-600 block">Toll free lines</span>
-                    </div>
-                </div>
-                <div class="flex items-center space-x-2 p-3 bg-gray-100 rounded-lg shadow-sm">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail text-blue-600"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-                    <div>
-                        <span class="font-semibold text-lg block">info@rssb.rw</span>
-                        <span class="text-gray-600 block">Reach to us</span>
-                    </div>
-                </div>
-            </div>
+          </div>
+          <!-- here -->
         </div>
-
-        <!-- Bottom Bar: Main Navigation -->
-        <nav class="bg-blue-900 px-4 md:px-8">
-            <div class="container mx-auto">
-                <ul class="flex flex-wrap justify-center md:justify-start space-x-4 md:space-x-8 text-white text-sm font-semibold">
-                    <!-- Navigation links -->
-                    <li class="relative py-4">
-                        <a href="#" class="pb-4 hover:text-blue-200 transition-colors duration-200 block">
-                            HOME
-                        </a>
-                        <!-- Active link indicator -->
-                        <div class="absolute bottom-0 left-0 right-0 h-1 bg-orange-500 rounded-t-md"></div>
-                    </li>
-                    <li class="relative py-4">
-                        <a href="#" class="pb-4 hover:text-blue-200 transition-colors duration-200 block">
-                            SCHEMES
-                        </a>
-                    </li>
-                    <li class="relative py-4">
-                        <a href="#" class="pb-4 hover:text-blue-200 transition-colors duration-200 block">
-                            INVESTMENT
-                        </a>
-                    </li>
-                    <li class="relative py-4">
-                        <a href="#" class="pb-4 hover:text-blue-200 transition-colors duration-200 block">
-                            MANAGEMENT
-                        </a>
-                    </li>
-                    <li class="relative py-4">
-                        <a href="#" class="pb-4 hover:text-blue-200 transition-colors duration-200 block">
-                            ABOUT
-                        </a>
-                    </li>
-                    <li class="relative py-4">
-                        <a href="#" class="pb-4 hover:text-blue-200 transition-colors duration-200 block">
-                            CAREERS
-                        </a>
-                    </li>
-                    <li class="relative py-4">
-                        <a href="#" class="pb-4 hover:text-blue-200 transition-colors duration-200 block">
-                            NEWS & EVENTS
-                        </a>
-                    </li>
-                </ul>
+        <div id="secondary-bar" class="bg-white-color pb-8">
+          <div
+            class="container mx-auto px-3.5 md:px-12 xl:px-30 2xl:px-36 py-5 flex justify-between items-center"
+          >
+            <!-- <a href="/"> -->
+            <div
+              style="
+                display: inline-block;
+                max-width: 100%;
+                overflow: hidden;
+                position: relative;
+                box-sizing: border-box;
+                margin: 0;
+              "
+            >
+              <div
+                style="box-sizing: border-box; display: block; max-width: 100%"
+              >
+                <!-- =========RSSB Logo =============-->
+                <div class="flex items-center space-x-4 mb-4 md:mb-0">
+                  <img
+                    src="/src/assets/rssb-cut-logo.png"
+                    alt="RSSB Logo"
+                    class="h-20 w-20 rounded-full"
+                  />
+                  <div class="flex flex-col text-blue-900">
+                    <span class="text-md">Our <span class="font-bold">Health</span></span>
+                    <span class="text-md">Our <span class="font-bold">Future</span></span>
+                  </div>
+                </div>
+              </div>
             </div>
-        </nav>
-    </header>
+            <div class="relative">
+              <div id="menu-ham" class="block xl:hidden ham-wrapper false">
+                <div id="menu-ham-1" class="ham-bar"></div>
+                <div id="menu-ham-2" class="ham-bar"></div>
+                <div id="menu-ham-3" class="ham-bar"></div>
+              </div>
+              <div
+                id="help-line-holder"
+                class="hidden xl:flex justify-center items-center"
+              >
+                <!-- ===========Calls section ===================-->
+                <div
+                  class="flex justify-center items-center border-r border-very-low-gray-color pr-4"
+                >
+                  <div
+                    class="border-very-low-gray-color border rounded-full p-2"
+                  >
+                    <img src="/src/assets/call.svg" class="w-5 h-5" alt="" />
+                  </div>
+                  <div class="ml-2">
+                    <div>
+                      <span class="text-blue-900 font-bold">4044</span>
+                    </div>
+                    <div class="-mt-2">
+                      <span class="text-gray-900 text-sm font-segoe-regular"
+                        >Toll free lines</span
+                      >
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Message section -->
+                <div class="flex justify-center items-center ml-4">
+                  <div
+                    class="border-very-low-gray-color border rounded-full p-2"
+                  >
+                    <img src="/src/assets/message.svg" class="w-5 h-5" alt="" />
+                  </div>
+                  <div class="ml-2">
+                    <div>
+                      <span class="text-blue-900 font-bold">info@rssb.rw</span>
+                    </div>
+                    <div class="-mt-2">
+                      <span class="text-gray-800 text-sm font-r"
+                        >Reach to us</span
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div id="language-selector" class=""></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          id="bottom-menu-holder"
+          class="hidden xl:block w-full absolute z-50 -mt-10"
+        >
+          <div class="container mx-auto px-3.5 md:px-12 xl:px-30 2xl:px-36">
+            <div
+              class="bg-blue-900 w-full px-12 py-8 rounded-md flex justify-between"
+            >
+              <div id="menu-holder" class="flex">
+                <a href="#">
+                  <div
+                    class="px-3.5 pb-2 border-b-2 border-transparent hover:border-orange-400 cursor-pointer flex justify-center items-center transition duration-700 ease-in-out border-orange-400"
+                  >
+                    <span class="font-normal text-white uppercase text-sm"
+                      >home</span
+                    >
+                  </div>
+                </a>
+                <a href="#">
+                  <div
+                    class="px-3.5 pb-2 border-b-2 border-transparent hover:border-orange-400 cursor-pointer flex justify-center items-center transition duration-700 ease-in-out false"
+                  >
+                    <span class="font-normal text-white uppercase text-sm"
+                      >schemes</span
+                    >
+                  </div>
+                </a>
+                <a href="#">
+                  <div
+                    class="px-3.5 pb-2 border-b-2 border-transparent hover:border-orange-400 cursor-pointer flex justify-center items-center transition duration-700 ease-in-out false"
+                  >
+                    <span class="font-normal text-white uppercase text-sm"
+                      >investment</span
+                    >
+                  </div>
+                </a>
+                <a href="#">
+                  <div
+                    class="px-3.5 pb-2 border-b-2 border-transparent hover:border-orange-400 cursor-pointer flex justify-center items-center transition duration-700 ease-in-out false"
+                  >
+                    <span class="font-normal text-white uppercase text-sm"
+                      >management</span
+                    >
+                  </div>
+                </a>
+                <a href="#">
+                  <div
+                    class="px-3.5 pb-2 border-b-2 border-transparent hover:border-orange-400 cursor-pointer flex justify-center items-center transition duration-700 ease-in-out false"
+                  >
+                    <span class="font-normal text-white uppercase text-sm"
+                      >about</span
+                    >
+                  </div>
+                </a>
+                <a href="#">
+                  <div
+                    class="px-3.5 pb-2 border-b-2 border-transparent hover:border-orange-400 cursor-pointer flex justify-center items-center transition duration-700 ease-in-out false"
+                  >
+                    <span class="font-normal text-white uppercase text-sm"
+                      >careers</span
+                    >
+                  </div>
+                </a>
+                <a href="#">
+                  <div
+                    class="px-3.5 pb-2 border-b-2 border-transparent hover:border-orange-400 cursor-pointer flex justify-center items-center transition duration-700 ease-in-out false"
+                  >
+                    <span class="font-normal text-white uppercase text-sm"
+                      >news &amp; events</span
+                    >
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="absolute mobile-menu menu-overlay w-screen false"></div>
+      </div>
+      <div class="relative sm:overflow-hidden">
+        <div></div>
+        <!-- =======Background image======== -->
+        <div>
+          <div id="slide-0" class="h-96 xl:h-screen-80 bg-low-blue-color false">
+            <div class="relative h-full">
+              <div class="absolute h-full w-full bg-blue-50">
+                <!-- <div class="secondary-slider-overlay w-full h-full"></div> -->
+                <!-- <div class="absolute top-0 w-full h-full"> -->
+                  <div
+                    class="container mx-auto px-3.5 md:px-12 xl:px-30 2xl:px-36 h-full"
+                  >
+                    <div
+                      class="flex justify-center h-full flex-col z-40 w-full xl:w-1/2"
+                    >
+                      <div
+                        class="mb-2 false transition duration-2000 ease-in-out transform"
+                        id="slide-text-0"
+                      >
+                        <span class="text-2xl xl:text-3xl font-work"
+                          ><span class="text-gray-800 font-light"></span
+                          ><span class="text-orange-400 font-semibold">
+                            Member First</span
+                          ><span class="text-gray-900 font-light"
+                            >, data-driven, evidence-based and high performing
+                            organization.</span
+                          ></span
+                        >
+                      </div>
+                      <div
+                        class="mb-4 w-full xl:w-1/2 flex items-center false transition duration-2000 ease-in-out transform"
+                        id="slide-topic-0"
+                      >
+                        <span
+                          class="text-blue-900 font-bold uppercase text-sm"
+                          >Members First</span
+                        >
+                      </div>
+                      <div
+                        class="mt-8 false transition duration-700 ease-in-out"
+                        id="slide-btn-0"
+                      >
+                        <button
+                          class="bg-blue-600 px-8 py-4 mb-14 cursor-pointer transition duration-300 focus:outline-none flex justify-center items-center"
+                        >
+                          <span
+                            class="text-white capitalize text-base font-bold leading-6 tracking-normal"
+                            >learn more</span
+                          >
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- here -->
+              <img
+                src="https://imagedelivery.net/oie13id8YpvudjA6JEtRCw/037deffd-f73a-4163-0b1d-29263b495a00/public"
+                class="hidden xl:block absolute z-10 right-0 bottom-0 h-full false transition duration-700 ease-in-out transform translate-y-8"
+                id="slide-image-0"
+              />
+            </div>
+          </div>
+          <div
+            id="slide-1"
+            class="h-96 xl:h-screen-80 bg-low-blue-color absolute hidden"
+          >
+            <div class="relative h-full">
+              <div
+                style="
+                  display: block;
+                  overflow: hidden;
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  bottom: 0;
+                  right: 0;
+                  box-sizing: border-box;
+                  margin: 0;
+                "
+              >
+                <noscript
+                  ><img
+                    id="slide-cover-1"
+                    srcset="
+                      /_next/image?url=https%3A%2F%2Fimagedelivery.net%2Foie13id8YpvudjA6JEtRCw%2Fa69ccc8b-9c58-43ca-a6ab-bfc7f4f5ce00%2Fpublic&amp;w=640&amp;q=75   640w,
+                      /_next/image?url=https%3A%2F%2Fimagedelivery.net%2Foie13id8YpvudjA6JEtRCw%2Fa69ccc8b-9c58-43ca-a6ab-bfc7f4f5ce00%2Fpublic&amp;w=750&amp;q=75   750w,
+                      /_next/image?url=https%3A%2F%2Fimagedelivery.net%2Foie13id8YpvudjA6JEtRCw%2Fa69ccc8b-9c58-43ca-a6ab-bfc7f4f5ce00%2Fpublic&amp;w=828&amp;q=75   828w,
+                      /_next/image?url=https%3A%2F%2Fimagedelivery.net%2Foie13id8YpvudjA6JEtRCw%2Fa69ccc8b-9c58-43ca-a6ab-bfc7f4f5ce00%2Fpublic&amp;w=1080&amp;q=75 1080w,
+                      /_next/image?url=https%3A%2F%2Fimagedelivery.net%2Foie13id8YpvudjA6JEtRCw%2Fa69ccc8b-9c58-43ca-a6ab-bfc7f4f5ce00%2Fpublic&amp;w=1200&amp;q=75 1200w,
+                      /_next/image?url=https%3A%2F%2Fimagedelivery.net%2Foie13id8YpvudjA6JEtRCw%2Fa69ccc8b-9c58-43ca-a6ab-bfc7f4f5ce00%2Fpublic&amp;w=1920&amp;q=75 1920w,
+                      /_next/image?url=https%3A%2F%2Fimagedelivery.net%2Foie13id8YpvudjA6JEtRCw%2Fa69ccc8b-9c58-43ca-a6ab-bfc7f4f5ce00%2Fpublic&amp;w=2048&amp;q=75 2048w,
+                      /_next/image?url=https%3A%2F%2Fimagedelivery.net%2Foie13id8YpvudjA6JEtRCw%2Fa69ccc8b-9c58-43ca-a6ab-bfc7f4f5ce00%2Fpublic&amp;w=3840&amp;q=75 3840w
+                    "
+                    src="https://imagedelivery.net/oie13id8YpvudjA6JEtRCw/a69ccc8b-9c58-43ca-a6ab-bfc7f4f5ce00/public"
+                    decoding="async"
+                    style="
+                      position: absolute;
+                      top: 0;
+                      left: 0;
+                      bottom: 0;
+                      right: 0;
+                      box-sizing: border-box;
+                      padding: 0;
+                      border: none;
+                      margin: auto;
+                      display: block;
+                      width: 0;
+                      height: 0;
+                      min-width: 100%;
+                      max-width: 100%;
+                      min-height: 100%;
+                      max-height: 100%;
+                    "
+                    class="opacity-0 transition duration-700 ease-in-out" /></noscript
+                ><img
+                  id="slide-cover-1"
+                  src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                  decoding="async"
+                  class="opacity-0 transition duration-700 ease-in-out"
+                  style="
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    bottom: 0;
+                    right: 0;
+                    box-sizing: border-box;
+                    padding: 0;
+                    border: none;
+                    margin: auto;
+                    display: block;
+                    width: 0;
+                    height: 0;
+                    min-width: 100%;
+                    max-width: 100%;
+                    min-height: 100%;
+                    max-height: 100%;
+                  "
+                />
+              </div>
+              <div class="absolute h-full w-full">
+                <div class="secondary-slider-overlay w-full h-full"></div>
+                <div class="absolute top-0 w-full h-full">
+                  <div
+                    class="container mx-auto px-3.5 md:px-12 xl:px-30 2xl:px-36 h-full"
+                  >
+                    <div
+                      class="flex justify-center h-full flex-col z-40 w-full xl:w-1/2"
+                    >
+                      <div
+                        class="mb-2 opacity-0 -translate-y-8 transition duration-2000 ease-in-out transform"
+                        id="slide-text-1"
+                      >
+                        <span class="text-2xl xl:text-3xl font-work"
+                          ><span class="text-gray-color font-light"
+                            >EJOHEZA</span
+                          ><span class="text-orange-color font-semibold">
+                            <!-- -->Save<!-- --> </span
+                          ><span class="text-gray-color font-light"
+                            >for a better future for you and your family.
+                          </span></span
+                        >
+                      </div>
+                      <div
+                        class="mb-4 w-full xl:w-1/2 flex items-center opacity-0 translate-y-8 transition duration-2000 ease-in-out transform"
+                        id="slide-topic-1"
+                      >
+                        <span
+                          class="text-blue-color font-segoe-bold uppercase text-sm"
+                          >ejoheza</span
+                        >
+                      </div>
+                      <div
+                        class="mt-8 opacity-0 transition duration-700 ease-in-out"
+                        id="slide-btn-1"
+                      >
+                        <button
+                          class="styles__ButtonHolder-sc-ozfmvs-0 UYbnI cursor-pointer transition duration-300 focus:outline-none flex justify-center items-center"
+                        >
+                          <span
+                            class="styles__ButtonLabel-sc-ozfmvs-1 jPFmEZ font-segoe-bold capitalize text-base font-bold leading-6 tracking-normal"
+                            >learn more</span
+                          >
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <img
+                src="https://imagedelivery.net/oie13id8YpvudjA6JEtRCw/4ef3c629-a508-4bc7-abeb-6461657fdb00/public"
+                class="hidden xl:block absolute z-10 right-0 bottom-0 h-full opacity-0 transition duration-700 ease-in-out transform translate-y-8"
+                id="slide-image-1"
+              />
+            </div>
+          </div>
+          <div
+            id="slide-2"
+            class="h-96 xl:h-screen-80 bg-low-blue-color absolute hidden"
+          >
+            <div class="relative h-full">
+              <div
+                style="
+                  display: block;
+                  overflow: hidden;
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  bottom: 0;
+                  right: 0;
+                  box-sizing: border-box;
+                  margin: 0;
+                "
+              >
+                <noscript
+                  ><img
+                    id="slide-cover-2"
+                    srcset="
+                      /_next/image?url=https%3A%2F%2Fimagedelivery.net%2Foie13id8YpvudjA6JEtRCw%2F979bf247-9dc3-4caf-681e-80699380ce00%2Fpublic&amp;w=640&amp;q=75   640w,
+                      /_next/image?url=https%3A%2F%2Fimagedelivery.net%2Foie13id8YpvudjA6JEtRCw%2F979bf247-9dc3-4caf-681e-80699380ce00%2Fpublic&amp;w=750&amp;q=75   750w,
+                      /_next/image?url=https%3A%2F%2Fimagedelivery.net%2Foie13id8YpvudjA6JEtRCw%2F979bf247-9dc3-4caf-681e-80699380ce00%2Fpublic&amp;w=828&amp;q=75   828w,
+                      /_next/image?url=https%3A%2F%2Fimagedelivery.net%2Foie13id8YpvudjA6JEtRCw%2F979bf247-9dc3-4caf-681e-80699380ce00%2Fpublic&amp;w=1080&amp;q=75 1080w,
+                      /_next/image?url=https%3A%2F%2Fimagedelivery.net%2Foie13id8YpvudjA6JEtRCw%2F979bf247-9dc3-4caf-681e-80699380ce00%2Fpublic&amp;w=1200&amp;q=75 1200w,
+                      /_next/image?url=https%3A%2F%2Fimagedelivery.net%2Foie13id8YpvudjA6JEtRCw%2F979bf247-9dc3-4caf-681e-80699380ce00%2Fpublic&amp;w=1920&amp;q=75 1920w,
+                      /_next/image?url=https%3A%2F%2Fimagedelivery.net%2Foie13id8YpvudjA6JEtRCw%2F979bf247-9dc3-4caf-681e-80699380ce00%2Fpublic&amp;w=2048&amp;q=75 2048w,
+                      /_next/image?url=https%3A%2F%2Fimagedelivery.net%2Foie13id8YpvudjA6JEtRCw%2F979bf247-9dc3-4caf-681e-80699380ce00%2Fpublic&amp;w=3840&amp;q=75 3840w
+                    "
+                    src="https://imagedelivery.net/oie13id8YpvudjA6JEtRCw/979bf247-9dc3-4caf-681e-80699380ce00/public"
+                    decoding="async"
+                    style="
+                      position: absolute;
+                      top: 0;
+                      left: 0;
+                      bottom: 0;
+                      right: 0;
+                      box-sizing: border-box;
+                      padding: 0;
+                      border: none;
+                      margin: auto;
+                      display: block;
+                      width: 0;
+                      height: 0;
+                      min-width: 100%;
+                      max-width: 100%;
+                      min-height: 100%;
+                      max-height: 100%;
+                    "
+                    class="opacity-0 transition duration-700 ease-in-out" /></noscript
+                ><img
+                  id="slide-cover-2"
+                  src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                  decoding="async"
+                  class="opacity-0 transition duration-700 ease-in-out"
+                  style="
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    bottom: 0;
+                    right: 0;
+                    box-sizing: border-box;
+                    padding: 0;
+                    border: none;
+                    margin: auto;
+                    display: block;
+                    width: 0;
+                    height: 0;
+                    min-width: 100%;
+                    max-width: 100%;
+                    min-height: 100%;
+                    max-height: 100%;
+                  "
+                />
+              </div>
+              <div class="absolute h-full w-full">
+                <div class="secondary-slider-overlay w-full h-full"></div>
+                <div class="absolute top-0 w-full h-full">
+                  <div
+                    class="container mx-auto px-3.5 md:px-12 xl:px-30 2xl:px-36 h-full"
+                  >
+                    <div
+                      class="flex justify-center h-full flex-col z-40 w-full xl:w-1/2"
+                    >
+                      <div
+                        class="mb-2 opacity-0 -translate-y-8 transition duration-2000 ease-in-out transform"
+                        id="slide-text-2"
+                      >
+                        <span class="text-2xl xl:text-3xl font-work"
+                          ><span class="text-gray-color font-light"
+                            >Enjoy your</span
+                          ><span class="text-orange-color font-semibold">
+                            <!-- -->Maternity Leave<!-- --> </span
+                          ><span class="text-gray-color font-light"
+                            >with your full salary.
+                          </span></span
+                        >
+                      </div>
+                      <div
+                        class="mb-4 w-full xl:w-1/2 flex items-center opacity-0 translate-y-8 transition duration-2000 ease-in-out transform"
+                        id="slide-topic-2"
+                      >
+                        <span
+                          class="text-blue-color font-segoe-bold uppercase text-sm"
+                          >Maternity Leave</span
+                        >
+                      </div>
+                      <div
+                        class="mt-8 opacity-0 transition duration-700 ease-in-out"
+                        id="slide-btn-2"
+                      >
+                        <button
+                          class="styles__ButtonHolder-sc-ozfmvs-0 UYbnI cursor-pointer transition duration-300 focus:outline-none flex justify-center items-center"
+                        >
+                          <span
+                            class="styles__ButtonLabel-sc-ozfmvs-1 jPFmEZ font-segoe-bold capitalize text-base font-bold leading-6 tracking-normal"
+                            >learn more</span
+                          >
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <img
+                src="https://imagedelivery.net/oie13id8YpvudjA6JEtRCw/7ddacd31-922c-4919-6d9f-c1d1cac76100/public"
+                class="hidden xl:block absolute z-10 right-0 bottom-0 h-full opacity-0 transition duration-700 ease-in-out transform translate-y-8"
+                id="slide-image-2"
+              />
+            </div>
+          </div>
+          <div
+            id="slide-3"
+            class="h-96 xl:h-screen-80 bg-low-blue-color absolute hidden"
+          >
+            <div class="relative h-full">
+              <div
+                style="
+                  display: block;
+                  overflow: hidden;
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  bottom: 0;
+                  right: 0;
+                  box-sizing: border-box;
+                  margin: 0;
+                "
+              >
+                <noscript
+                  ><img
+                    id="slide-cover-3"
+                    srcset="
+                      /_next/image?url=https%3A%2F%2Fimagedelivery.net%2Foie13id8YpvudjA6JEtRCw%2F9c082456-28c2-4d89-5b5a-2253f090d100%2Fpublic&amp;w=640&amp;q=75   640w,
+                      /_next/image?url=https%3A%2F%2Fimagedelivery.net%2Foie13id8YpvudjA6JEtRCw%2F9c082456-28c2-4d89-5b5a-2253f090d100%2Fpublic&amp;w=750&amp;q=75   750w,
+                      /_next/image?url=https%3A%2F%2Fimagedelivery.net%2Foie13id8YpvudjA6JEtRCw%2F9c082456-28c2-4d89-5b5a-2253f090d100%2Fpublic&amp;w=828&amp;q=75   828w,
+                      /_next/image?url=https%3A%2F%2Fimagedelivery.net%2Foie13id8YpvudjA6JEtRCw%2F9c082456-28c2-4d89-5b5a-2253f090d100%2Fpublic&amp;w=1080&amp;q=75 1080w,
+                      /_next/image?url=https%3A%2F%2Fimagedelivery.net%2Foie13id8YpvudjA6JEtRCw%2F9c082456-28c2-4d89-5b5a-2253f090d100%2Fpublic&amp;w=1200&amp;q=75 1200w,
+                      /_next/image?url=https%3A%2F%2Fimagedelivery.net%2Foie13id8YpvudjA6JEtRCw%2F9c082456-28c2-4d89-5b5a-2253f090d100%2Fpublic&amp;w=1920&amp;q=75 1920w,
+                      /_next/image?url=https%3A%2F%2Fimagedelivery.net%2Foie13id8YpvudjA6JEtRCw%2F9c082456-28c2-4d89-5b5a-2253f090d100%2Fpublic&amp;w=2048&amp;q=75 2048w,
+                      /_next/image?url=https%3A%2F%2Fimagedelivery.net%2Foie13id8YpvudjA6JEtRCw%2F9c082456-28c2-4d89-5b5a-2253f090d100%2Fpublic&amp;w=3840&amp;q=75 3840w
+                    "
+                    src="https://imagedelivery.net/oie13id8YpvudjA6JEtRCw/9c082456-28c2-4d89-5b5a-2253f090d100/public"
+                    decoding="async"
+                    style="
+                      position: absolute;
+                      top: 0;
+                      left: 0;
+                      bottom: 0;
+                      right: 0;
+                      box-sizing: border-box;
+                      padding: 0;
+                      border: none;
+                      margin: auto;
+                      display: block;
+                      width: 0;
+                      height: 0;
+                      min-width: 100%;
+                      max-width: 100%;
+                      min-height: 100%;
+                      max-height: 100%;
+                    "
+                    class="opacity-0 transition duration-700 ease-in-out" /></noscript
+                ><img
+                  id="slide-cover-3"
+                  src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                  decoding="async"
+                  class="opacity-0 transition duration-700 ease-in-out"
+                  style="
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    bottom: 0;
+                    right: 0;
+                    box-sizing: border-box;
+                    padding: 0;
+                    border: none;
+                    margin: auto;
+                    display: block;
+                    width: 0;
+                    height: 0;
+                    min-width: 100%;
+                    max-width: 100%;
+                    min-height: 100%;
+                    max-height: 100%;
+                  "
+                />
+              </div>
+              <div class="absolute h-full w-full">
+                <div class="secondary-slider-overlay w-full h-full"></div>
+                <div class="absolute top-0 w-full h-full">
+                  <div
+                    class="container mx-auto px-3.5 md:px-12 xl:px-30 2xl:px-36 h-full"
+                  >
+                    <div
+                      class="flex justify-center h-full flex-col z-40 w-full xl:w-1/2"
+                    >
+                      <div
+                        class="mb-2 opacity-0 -translate-y-8 transition duration-2000 ease-in-out transform"
+                        id="slide-text-3"
+                      >
+                        <span class="text-2xl xl:text-3xl font-work"
+                          ><span class="text-gray-color font-light"
+                            >Our Health</span
+                          ><span class="text-orange-color font-semibold">
+                            <!-- -->Our Future<!-- --> </span
+                          ><span class="text-gray-color font-light"
+                            >.
+                          </span></span
+                        >
+                      </div>
+                      <div
+                        class="mb-4 w-full xl:w-1/2 flex items-center opacity-0 translate-y-8 transition duration-2000 ease-in-out transform"
+                        id="slide-topic-3"
+                      >
+                        <span
+                          class="text-blue-color font-segoe-bold uppercase text-sm"
+                          >Medical</span
+                        >
+                      </div>
+                      <div
+                        class="mt-8 opacity-0 transition duration-700 ease-in-out"
+                        id="slide-btn-3"
+                      >
+                        <button
+                          class="styles__ButtonHolder-sc-ozfmvs-0 UYbnI cursor-pointer transition duration-300 focus:outline-none flex justify-center items-center"
+                        >
+                          <span
+                            class="styles__ButtonLabel-sc-ozfmvs-1 jPFmEZ font-segoe-bold capitalize text-base font-bold leading-6 tracking-normal"
+                            >learn more</span
+                          >
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <img
+                src="https://imagedelivery.net/oie13id8YpvudjA6JEtRCw/de997354-0a4c-44fc-34b2-55879e02d400/public"
+                class="hidden xl:block absolute z-10 right-0 bottom-0 h-full opacity-0 transition duration-700 ease-in-out transform translate-y-8"
+                id="slide-image-3"
+              />
+            </div>
+          </div>
+          <div
+            id="slide-4"
+            class="h-96 xl:h-screen-80 bg-low-blue-color absolute hidden"
+          >
+            <div class="relative h-full">
+              <div
+                style="
+                  display: block;
+                  overflow: hidden;
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  bottom: 0;
+                  right: 0;
+                  box-sizing: border-box;
+                  margin: 0;
+                "
+              >
+                <noscript
+                  ><img
+                    id="slide-cover-4"
+                    srcset="
+                      /_next/image?url=https%3A%2F%2Fimagedelivery.net%2Foie13id8YpvudjA6JEtRCw%2Fd8ce82bf-44f5-42ff-1c49-51c3094d8100%2Fpublic&amp;w=640&amp;q=75   640w,
+                      /_next/image?url=https%3A%2F%2Fimagedelivery.net%2Foie13id8YpvudjA6JEtRCw%2Fd8ce82bf-44f5-42ff-1c49-51c3094d8100%2Fpublic&amp;w=750&amp;q=75   750w,
+                      /_next/image?url=https%3A%2F%2Fimagedelivery.net%2Foie13id8YpvudjA6JEtRCw%2Fd8ce82bf-44f5-42ff-1c49-51c3094d8100%2Fpublic&amp;w=828&amp;q=75   828w,
+                      /_next/image?url=https%3A%2F%2Fimagedelivery.net%2Foie13id8YpvudjA6JEtRCw%2Fd8ce82bf-44f5-42ff-1c49-51c3094d8100%2Fpublic&amp;w=1080&amp;q=75 1080w,
+                      /_next/image?url=https%3A%2F%2Fimagedelivery.net%2Foie13id8YpvudjA6JEtRCw%2Fd8ce82bf-44f5-42ff-1c49-51c3094d8100%2Fpublic&amp;w=1200&amp;q=75 1200w,
+                      /_next/image?url=https%3A%2F%2Fimagedelivery.net%2Foie13id8YpvudjA6JEtRCw%2Fd8ce82bf-44f5-42ff-1c49-51c3094d8100%2Fpublic&amp;w=1920&amp;q=75 1920w,
+                      /_next/image?url=https%3A%2F%2Fimagedelivery.net%2Foie13id8YpvudjA6JEtRCw%2Fd8ce82bf-44f5-42ff-1c49-51c3094d8100%2Fpublic&amp;w=2048&amp;q=75 2048w,
+                      /_next/image?url=https%3A%2F%2Fimagedelivery.net%2Foie13id8YpvudjA6JEtRCw%2Fd8ce82bf-44f5-42ff-1c49-51c3094d8100%2Fpublic&amp;w=3840&amp;q=75 3840w
+                    "
+                    src="https://imagedelivery.net/oie13id8YpvudjA6JEtRCw/d8ce82bf-44f5-42ff-1c49-51c3094d8100/public"
+                    decoding="async"
+                    style="
+                      position: absolute;
+                      top: 0;
+                      left: 0;
+                      bottom: 0;
+                      right: 0;
+                      box-sizing: border-box;
+                      padding: 0;
+                      border: none;
+                      margin: auto;
+                      display: block;
+                      width: 0;
+                      height: 0;
+                      min-width: 100%;
+                      max-width: 100%;
+                      min-height: 100%;
+                      max-height: 100%;
+                    "
+                    class="opacity-0 transition duration-700 ease-in-out" /></noscript
+                ><img
+                  id="slide-cover-4"
+                  src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                  decoding="async"
+                  class="opacity-0 transition duration-700 ease-in-out"
+                  style="
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    bottom: 0;
+                    right: 0;
+                    box-sizing: border-box;
+                    padding: 0;
+                    border: none;
+                    margin: auto;
+                    display: block;
+                    width: 0;
+                    height: 0;
+                    min-width: 100%;
+                    max-width: 100%;
+                    min-height: 100%;
+                    max-height: 100%;
+                  "
+                />
+              </div>
+              <div class="absolute h-full w-full">
+                <div class="secondary-slider-overlay w-full h-full"></div>
+                <div class="absolute top-0 w-full h-full">
+                  <div
+                    class="container mx-auto px-3.5 md:px-12 xl:px-30 2xl:px-36 h-full"
+                  >
+                    <div
+                      class="flex justify-center h-full flex-col z-40 w-full xl:w-1/2"
+                    >
+                      <div
+                        class="mb-2 opacity-0 -translate-y-8 transition duration-2000 ease-in-out transform"
+                        id="slide-text-4"
+                      >
+                        <span class="text-2xl xl:text-3xl font-work"
+                          ><span class="text-gray-color font-light"
+                            >We are here</span
+                          ><span class="text-orange-color font-semibold">
+                            <!-- -->For you<!-- --> </span
+                          ><span class="text-gray-color font-light"
+                            >.
+                          </span></span
+                        >
+                      </div>
+                      <div
+                        class="mb-4 w-full xl:w-1/2 flex items-center opacity-0 translate-y-8 transition duration-2000 ease-in-out transform"
+                        id="slide-topic-4"
+                      >
+                        <span
+                          class="text-blue-color font-segoe-bold uppercase text-sm"
+                          >Occupational Hazards</span
+                        >
+                      </div>
+                      <div
+                        class="mt-8 opacity-0 transition duration-700 ease-in-out"
+                        id="slide-btn-4"
+                      >
+                        <button
+                          class="styles__ButtonHolder-sc-ozfmvs-0 UYbnI cursor-pointer transition duration-300 focus:outline-none flex justify-center items-center"
+                        >
+                          <span
+                            class="styles__ButtonLabel-sc-ozfmvs-1 jPFmEZ font-segoe-bold capitalize text-base font-bold leading-6 tracking-normal"
+                            >learn more</span
+                          >
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <img
+                src="https://imagedelivery.net/oie13id8YpvudjA6JEtRCw/02191530-982d-4231-ad70-7538639c5e00/public"
+                class="hidden xl:block absolute z-10 right-0 bottom-0 h-full opacity-0 transition duration-700 ease-in-out transform translate-y-8"
+                id="slide-image-4"
+              />
+            </div>
+          </div>
+        </div>
+        <!-- ========= Members experience section start here ==============-->
+        <div class="-mt-8 xl:-mt-32 z-50">
+          <div
+            class="container mx-auto px-3.5 md:px-12 xl:px-30 2xl:px-36 overflow-y-auto xl:overflow-y-hidden"
+          >
+            <div class="flex justify-start xl:justify-center pt-4">
+              <div
+                class="bg-white  mb-4 px-8 py-4 z-50 mission-card border border-gray-400"
+              >
+                <div class="flex w-44 h-auto flex-col">
+                  <div>
+                    <i class="uc-icon text-blue-700 text-5xl font-light">
+                      <img src="/src/assets/user.png" class="w-8 h-8" alt="">
+                    </i>
+                  </div>
+                  <div class="my-2">
+                    <span
+                      class="text-gray-900  font-bold text-lg capitalize"
+                      >Member first</span
+                    >
+                  </div>
+                  <div class="">
+                    <span class="text-gray-800 font-normal text-sm"
+                      ><span class="font-bold text-blue-900"
+                        >13 Million</span
+                      >
+                      of Rwandans are covered by RSSB services</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <div
+                class="bg-white mb-4 px-8 py-4 z-50 mission-card border-t border-r border-b border-gray-400"
+              >
+                <div class="flex w-44 h-auto flex-col">
+                  <div>
+                    <i class="uc-icon text-blue-700 text-5xl font-light">
+                      <img src="/src/assets/trend.png" class="w-8 h-8" alt="">
+                    </i>
+                  </div>
+                  <div class="my-2">
+                    <span
+                      class="text-gray-900 font-bold text-lg capitalize"
+                      >Experience</span
+                    >
+                  </div>
+                  <div class="">
+                    <span class="text-gray-800 font-normal text-sm"
+                      ><span class="font-bold text-blue-900"
+                        >60 years</span
+                      >
+                      of service for your safety and well-being.</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <div
+                class="bg-white mb-4 px-8 py-4 z-50 mission-card border-t border-r border-b border-very-low-gray-color"
+              >
+                <div class="flex w-44 h-auto flex-col">
+                  <div>
+                    <i class="uc-icon text-blue-700 text-5xl font-light">
+                      <img src="/src/assets/home.png" class="w-8 h-8" alt="">
+                    </i>
+                  </div>
+                  <div class="my-2">
+                    <span
+                      class="text-gray-900 font-bold text-lg capitalize"
+                      >branches</span
+                    >
+                  </div>
+                  <div class="">
+                    <span class="text-gray-800 font-normal text-sm"
+                      >Our services decentralized in
+                      <span class="font-bold text-blue-900"
+                        >30 branches</span
+                      >
+                      for your satisfaction</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <div
+                class="bg-white mb-4 px-8 py-4 z-50 mission-card border-t border-r border-b border-very-low-gray-color"
+              >
+                <div class="flex w-44 h-auto flex-col">
+                  <div>
+                    <i class="uc-icon text-blue-700 text-5xl font-light">
+                      <img src="/src/assets/health-check.png" class="w-8 h-8" alt="">
+                    </i>
+                  </div>
+                  <div class="my-2">
+                    <span
+                      class="text-gray-900 font-bold text-lg capitalize"
+                      >Data driven</span
+                    >
+                  </div>
+                  <div class="">
+                    <span class="text-gray-700 font-normal text-sm"
+                      >Learning from our data to improve the services offered to
+                      our members</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- =============end here======================= -->
+        <div
+          class="container mx-auto px-3.5 md:px-12 xl:px-30 2xl:px-36 flex my-12 flex-col"
+        >
+          <div class="text-left sm:text-center">
+            <h2 class="text-3xl font-extrabold sm:text-4xl hidden sm:block">
+              <span class="block text-gray-600"
+                >Optimistic and forward-looking<br />
+                agent of central government, working to achieve</span
+              >
+              <span class="block text-blue-color"
+                >the financial security and health of<br />
+                all Rwandans.</span
+              >
+            </h2>
+            <h2 class="text-3xl font-extrabold sm:text-4xl block sm:hidden">
+              <span class="text-gray-600"
+                >Optimistic and forward-looking agent of central government,
+                working to achieve the financial security and health of all<!-- -->
+                <span class="text-blue-color">Rwandans.</span></span
+              >
+            </h2>
+          </div>
+        </div>
+        <div id="schemes" class="bg-white-color pt-12">
+          <div class="container mx-auto px-3.5 md:px-12 xl:px-30 2xl:px-36">
+            <div class="flex justify-center">
+              <div class="flex flex-col undefined">
+                <div class="flex items-center mb-4 false">
+                  <div class="bg-orange-color w-8 h-1"></div>
+                  <div class="ml-1.5">
+                    <span
+                      class="uppercase text-blue-color font-segoe-bold text-xl"
+                      >SOCIAL PROTECTION SCHEMES</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3 xl:grid-rows-2 mt-12 pb-16"
+            >
+              <div
+                class="bg-transparent border border-very-low-gray-color rounded undefined"
+              >
+                <a href="/scheme/pension-scheme">
+                  <div class="h-100 relative single-scheme cursor-pointer">
+                    <div
+                      class="scheme-overlay absolute z-10 block w-full h-full"
+                    ></div>
+                    <div
+                      style="
+                        display: inline-block;
+                        max-width: 100%;
+                        overflow: hidden;
+                        position: relative;
+                        box-sizing: border-box;
+                        margin: 0;
+                      "
+                    >
+                      <div
+                        style="
+                          box-sizing: border-box;
+                          display: block;
+                          max-width: 100%;
+                        "
+                      >
+                        <img
+                          style="
+                            max-width: 100%;
+                            display: block;
+                            margin: 0;
+                            border: none;
+                            padding: 0;
+                          "
+                          alt=""
+                          aria-hidden="true"
+                          role="presentation"
+                          src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwMCIgaGVpZ2h0PSI3NTAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmVyc2lvbj0iMS4xIi8+"
+                        />
+                      </div>
+                      <noscript
+                        ><img
+                          srcset="
+                            /_next/image?url=https%3A%2F%2Fimagedelivery.net%2Foie13id8YpvudjA6JEtRCw%2F473247ff-3d97-44da-c535-6c1cb1584100%2Fpublic&amp;w=1080&amp;q=75 1x,
+                            /_next/image?url=https%3A%2F%2Fimagedelivery.net%2Foie13id8YpvudjA6JEtRCw%2F473247ff-3d97-44da-c535-6c1cb1584100%2Fpublic&amp;w=2048&amp;q=75 2x
+                          "
+                          src="https://imagedelivery.net/oie13id8YpvudjA6JEtRCw/473247ff-3d97-44da-c535-6c1cb1584100/public"
+                          decoding="async"
+                          style="
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            bottom: 0;
+                            right: 0;
+                            box-sizing: border-box;
+                            padding: 0;
+                            border: none;
+                            margin: auto;
+                            display: block;
+                            width: 0;
+                            height: 0;
+                            min-width: 100%;
+                            max-width: 100%;
+                            min-height: 100%;
+                            max-height: 100%;
+                            object-fit: cover;
+                          "
+                          class="scheme-img" /></noscript
+                      ><img
+                        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                        decoding="async"
+                        class="scheme-img"
+                        style="
+                          position: absolute;
+                          top: 0;
+                          left: 0;
+                          bottom: 0;
+                          right: 0;
+                          box-sizing: border-box;
+                          padding: 0;
+                          border: none;
+                          margin: auto;
+                          display: block;
+                          width: 0;
+                          height: 0;
+                          min-width: 100%;
+                          max-width: 100%;
+                          min-height: 100%;
+                          max-height: 100%;
+                          object-fit: cover;
+                        "
+                      />
+                    </div>
+                    <div
+                      class="flex flex-col justify-center items-center absolute w-full h-full top-0 z-50"
+                    >
+                      <img
+                        src="https://imagedelivery.net/oie13id8YpvudjA6JEtRCw/6706608e-68dc-4939-3df4-1ca43beec800/public"
+                        class="scheme-icon w-16 h-20"
+                      />
+                      <div class="w-1/2 text-center scheme-label-wrapper">
+                        <span
+                          class="font-segoe-bold uppercase text-gray-color scheme-label"
+                          >Pension Scheme</span
+                        >
+                      </div>
+                      <div class="text-center scheme-description-wrapper px-4">
+                        <span
+                          class="font-segoe-regular capitalize text-low-gray-color scheme-description"
+                          >Retire with dignity</span
+                        >
+                      </div>
+                      <div class="mt-4 flex items-center flex-col scheme-btn">
+                        <div>
+                          <span
+                            class="uppercase font-segoe-regular text-white-color"
+                            >learn more</span
+                          >
+                        </div>
+                        <div class="bg-orange-color w-8 h-1"></div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div
+                class="bg-transparent border border-very-low-gray-color rounded undefined"
+              >
+                <a href="/scheme/occupational-hazards">
+                  <div class="h-100 relative single-scheme cursor-pointer">
+                    <div
+                      class="scheme-overlay absolute z-10 block w-full h-full"
+                    ></div>
+                    <div
+                      style="
+                        display: inline-block;
+                        max-width: 100%;
+                        overflow: hidden;
+                        position: relative;
+                        box-sizing: border-box;
+                        margin: 0;
+                      "
+                    >
+                      <div
+                        style="
+                          box-sizing: border-box;
+                          display: block;
+                          max-width: 100%;
+                        "
+                      >
+                        <img
+                          style="
+                            max-width: 100%;
+                            display: block;
+                            margin: 0;
+                            border: none;
+                            padding: 0;
+                          "
+                          alt=""
+                          aria-hidden="true"
+                          role="presentation"
+                          src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwMCIgaGVpZ2h0PSI3NTAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmVyc2lvbj0iMS4xIi8+"
+                        />
+                      </div>
+                      <noscript
+                        ><img
+                          srcset="
+                            /_next/image?url=https%3A%2F%2Fimagedelivery.net%2Foie13id8YpvudjA6JEtRCw%2F16639cea-6548-4e8c-336b-16ec14898800%2Fpublic&amp;w=1080&amp;q=75 1x,
+                            /_next/image?url=https%3A%2F%2Fimagedelivery.net%2Foie13id8YpvudjA6JEtRCw%2F16639cea-6548-4e8c-336b-16ec14898800%2Fpublic&amp;w=2048&amp;q=75 2x
+                          "
+                          src="https://imagedelivery.net/oie13id8YpvudjA6JEtRCw/16639cea-6548-4e8c-336b-16ec14898800/public"
+                          decoding="async"
+                          style="
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            bottom: 0;
+                            right: 0;
+                            box-sizing: border-box;
+                            padding: 0;
+                            border: none;
+                            margin: auto;
+                            display: block;
+                            width: 0;
+                            height: 0;
+                            min-width: 100%;
+                            max-width: 100%;
+                            min-height: 100%;
+                            max-height: 100%;
+                            object-fit: cover;
+                          "
+                          class="scheme-img" /></noscript
+                      ><img
+                        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                        decoding="async"
+                        class="scheme-img"
+                        style="
+                          position: absolute;
+                          top: 0;
+                          left: 0;
+                          bottom: 0;
+                          right: 0;
+                          box-sizing: border-box;
+                          padding: 0;
+                          border: none;
+                          margin: auto;
+                          display: block;
+                          width: 0;
+                          height: 0;
+                          min-width: 100%;
+                          max-width: 100%;
+                          min-height: 100%;
+                          max-height: 100%;
+                          object-fit: cover;
+                        "
+                      />
+                    </div>
+                    <div
+                      class="flex flex-col justify-center items-center absolute w-full h-full top-0 z-50"
+                    >
+                      <img
+                        src="https://imagedelivery.net/oie13id8YpvudjA6JEtRCw/a0f5ada0-919a-41ae-a25c-cbddd95d6a00/public"
+                        class="scheme-icon w-16 h-20"
+                      />
+                      <div class="w-1/2 text-center scheme-label-wrapper">
+                        <span
+                          class="font-segoe-bold uppercase text-gray-color scheme-label"
+                          >Occupational Hazards</span
+                        >
+                      </div>
+                      <div class="text-center scheme-description-wrapper px-4">
+                        <span
+                          class="font-segoe-regular capitalize text-low-gray-color scheme-description"
+                          >We are here for you</span
+                        >
+                      </div>
+                      <div class="mt-4 flex items-center flex-col scheme-btn">
+                        <div>
+                          <span
+                            class="uppercase font-segoe-regular text-white-color"
+                            >learn more</span
+                          >
+                        </div>
+                        <div class="bg-orange-color w-8 h-1"></div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div
+                class="bg-transparent border border-very-low-gray-color rounded undefined"
+              >
+                <a href="/scheme/medical-scheme">
+                  <div class="h-100 relative single-scheme cursor-pointer">
+                    <div
+                      class="scheme-overlay absolute z-10 block w-full h-full"
+                    ></div>
+                    <div
+                      style="
+                        display: inline-block;
+                        max-width: 100%;
+                        overflow: hidden;
+                        position: relative;
+                        box-sizing: border-box;
+                        margin: 0;
+                      "
+                    >
+                      <div
+                        style="
+                          box-sizing: border-box;
+                          display: block;
+                          max-width: 100%;
+                        "
+                      >
+                        <img
+                          style="
+                            max-width: 100%;
+                            display: block;
+                            margin: 0;
+                            border: none;
+                            padding: 0;
+                          "
+                          alt=""
+                          aria-hidden="true"
+                          role="presentation"
+                          src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwMCIgaGVpZ2h0PSI3NTAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmVyc2lvbj0iMS4xIi8+"
+                        />
+                      </div>
+                      <noscript
+                        ><img
+                          srcset="
+                            /_next/image?url=https%3A%2F%2Fimagedelivery.net%2Foie13id8YpvudjA6JEtRCw%2F115d52f0-9196-469e-8d3c-9a75567a0900%2Fpublic&amp;w=1080&amp;q=75 1x,
+                            /_next/image?url=https%3A%2F%2Fimagedelivery.net%2Foie13id8YpvudjA6JEtRCw%2F115d52f0-9196-469e-8d3c-9a75567a0900%2Fpublic&amp;w=2048&amp;q=75 2x
+                          "
+                          src="https://imagedelivery.net/oie13id8YpvudjA6JEtRCw/115d52f0-9196-469e-8d3c-9a75567a0900/public"
+                          decoding="async"
+                          style="
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            bottom: 0;
+                            right: 0;
+                            box-sizing: border-box;
+                            padding: 0;
+                            border: none;
+                            margin: auto;
+                            display: block;
+                            width: 0;
+                            height: 0;
+                            min-width: 100%;
+                            max-width: 100%;
+                            min-height: 100%;
+                            max-height: 100%;
+                            object-fit: cover;
+                          "
+                          class="scheme-img" /></noscript
+                      ><img
+                        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                        decoding="async"
+                        class="scheme-img"
+                        style="
+                          position: absolute;
+                          top: 0;
+                          left: 0;
+                          bottom: 0;
+                          right: 0;
+                          box-sizing: border-box;
+                          padding: 0;
+                          border: none;
+                          margin: auto;
+                          display: block;
+                          width: 0;
+                          height: 0;
+                          min-width: 100%;
+                          max-width: 100%;
+                          min-height: 100%;
+                          max-height: 100%;
+                          object-fit: cover;
+                        "
+                      />
+                    </div>
+                    <div
+                      class="flex flex-col justify-center items-center absolute w-full h-full top-0 z-50"
+                    >
+                      <img
+                        src="https://imagedelivery.net/oie13id8YpvudjA6JEtRCw/e47b24f3-9d9d-4000-9178-3e3e77383000/public"
+                        class="scheme-icon w-16 h-20"
+                      />
+                      <div class="w-1/2 text-center scheme-label-wrapper">
+                        <span
+                          class="font-segoe-bold uppercase text-gray-color scheme-label"
+                          >Medical Scheme</span
+                        >
+                      </div>
+                      <div class="text-center scheme-description-wrapper px-4">
+                        <span
+                          class="font-segoe-regular capitalize text-low-gray-color scheme-description"
+                          >Our Health, our Future</span
+                        >
+                      </div>
+                      <div class="mt-4 flex items-center flex-col scheme-btn">
+                        <div>
+                          <span
+                            class="uppercase font-segoe-regular text-white-color"
+                            >learn more</span
+                          >
+                        </div>
+                        <div class="bg-orange-color w-8 h-1"></div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div
+                class="bg-transparent border border-very-low-gray-color rounded undefined"
+              >
+                <a href="/scheme/cbhi-scheme">
+                  <div class="h-100 relative single-scheme cursor-pointer">
+                    <div
+                      class="scheme-overlay absolute z-10 block w-full h-full"
+                    ></div>
+                    <div
+                      style="
+                        display: inline-block;
+                        max-width: 100%;
+                        overflow: hidden;
+                        position: relative;
+                        box-sizing: border-box;
+                        margin: 0;
+                      "
+                    >
+                      <div
+                        style="
+                          box-sizing: border-box;
+                          display: block;
+                          max-width: 100%;
+                        "
+                      >
+                        <img
+                          style="
+                            max-width: 100%;
+                            display: block;
+                            margin: 0;
+                            border: none;
+                            padding: 0;
+                          "
+                          alt=""
+                          aria-hidden="true"
+                          role="presentation"
+                          src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwMCIgaGVpZ2h0PSI3NTAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmVyc2lvbj0iMS4xIi8+"
+                        />
+                      </div>
+                      <noscript
+                        ><img
+                          srcset="
+                            /_next/image?url=https%3A%2F%2Fimagedelivery.net%2Foie13id8YpvudjA6JEtRCw%2Ffb7a5457-33a0-43ea-980b-78186252ce00%2Fpublic&amp;w=1080&amp;q=75 1x,
+                            /_next/image?url=https%3A%2F%2Fimagedelivery.net%2Foie13id8YpvudjA6JEtRCw%2Ffb7a5457-33a0-43ea-980b-78186252ce00%2Fpublic&amp;w=2048&amp;q=75 2x
+                          "
+                          src="https://imagedelivery.net/oie13id8YpvudjA6JEtRCw/fb7a5457-33a0-43ea-980b-78186252ce00/public"
+                          decoding="async"
+                          style="
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            bottom: 0;
+                            right: 0;
+                            box-sizing: border-box;
+                            padding: 0;
+                            border: none;
+                            margin: auto;
+                            display: block;
+                            width: 0;
+                            height: 0;
+                            min-width: 100%;
+                            max-width: 100%;
+                            min-height: 100%;
+                            max-height: 100%;
+                            object-fit: cover;
+                          "
+                          class="scheme-img" /></noscript
+                      ><img
+                        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                        decoding="async"
+                        class="scheme-img"
+                        style="
+                          position: absolute;
+                          top: 0;
+                          left: 0;
+                          bottom: 0;
+                          right: 0;
+                          box-sizing: border-box;
+                          padding: 0;
+                          border: none;
+                          margin: auto;
+                          display: block;
+                          width: 0;
+                          height: 0;
+                          min-width: 100%;
+                          max-width: 100%;
+                          min-height: 100%;
+                          max-height: 100%;
+                          object-fit: cover;
+                        "
+                      />
+                    </div>
+                    <div
+                      class="flex flex-col justify-center items-center absolute w-full h-full top-0 z-50"
+                    >
+                      <img
+                        src="https://imagedelivery.net/oie13id8YpvudjA6JEtRCw/3b47e15c-6cc3-4db6-6345-a2a078f6a100/public"
+                        class="scheme-icon w-16 h-20"
+                      />
+                      <div class="w-1/2 text-center scheme-label-wrapper">
+                        <span
+                          class="font-segoe-bold uppercase text-gray-color scheme-label"
+                          >CBHI Scheme</span
+                        >
+                      </div>
+                      <div class="text-center scheme-description-wrapper px-4">
+                        <span
+                          class="font-segoe-regular capitalize text-low-gray-color scheme-description"
+                          >Giving you happiness at best rate</span
+                        >
+                      </div>
+                      <div class="mt-4 flex items-center flex-col scheme-btn">
+                        <div>
+                          <span
+                            class="uppercase font-segoe-regular text-white-color"
+                            >learn more</span
+                          >
+                        </div>
+                        <div class="bg-orange-color w-8 h-1"></div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div
+                class="bg-transparent border border-very-low-gray-color rounded undefined"
+              >
+                <a href="/scheme/ejo-heza">
+                  <div class="h-100 relative single-scheme cursor-pointer">
+                    <div
+                      class="scheme-overlay absolute z-10 block w-full h-full"
+                    ></div>
+                    <div
+                      style="
+                        display: inline-block;
+                        max-width: 100%;
+                        overflow: hidden;
+                        position: relative;
+                        box-sizing: border-box;
+                        margin: 0;
+                      "
+                    >
+                      <div
+                        style="
+                          box-sizing: border-box;
+                          display: block;
+                          max-width: 100%;
+                        "
+                      >
+                        <img
+                          style="
+                            max-width: 100%;
+                            display: block;
+                            margin: 0;
+                            border: none;
+                            padding: 0;
+                          "
+                          alt=""
+                          aria-hidden="true"
+                          role="presentation"
+                          src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwMCIgaGVpZ2h0PSI3NTAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmVyc2lvbj0iMS4xIi8+"
+                        />
+                      </div>
+                      <noscript
+                        ><img
+                          srcset="
+                            /_next/image?url=https%3A%2F%2Fimagedelivery.net%2Foie13id8YpvudjA6JEtRCw%2F95c9a6c0-c2d5-4675-ec5f-c71916dfbc00%2Fpublic&amp;w=1080&amp;q=75 1x,
+                            /_next/image?url=https%3A%2F%2Fimagedelivery.net%2Foie13id8YpvudjA6JEtRCw%2F95c9a6c0-c2d5-4675-ec5f-c71916dfbc00%2Fpublic&amp;w=2048&amp;q=75 2x
+                          "
+                          src="https://imagedelivery.net/oie13id8YpvudjA6JEtRCw/95c9a6c0-c2d5-4675-ec5f-c71916dfbc00/public"
+                          decoding="async"
+                          style="
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            bottom: 0;
+                            right: 0;
+                            box-sizing: border-box;
+                            padding: 0;
+                            border: none;
+                            margin: auto;
+                            display: block;
+                            width: 0;
+                            height: 0;
+                            min-width: 100%;
+                            max-width: 100%;
+                            min-height: 100%;
+                            max-height: 100%;
+                            object-fit: cover;
+                          "
+                          class="scheme-img" /></noscript
+                      ><img
+                        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                        decoding="async"
+                        class="scheme-img"
+                        style="
+                          position: absolute;
+                          top: 0;
+                          left: 0;
+                          bottom: 0;
+                          right: 0;
+                          box-sizing: border-box;
+                          padding: 0;
+                          border: none;
+                          margin: auto;
+                          display: block;
+                          width: 0;
+                          height: 0;
+                          min-width: 100%;
+                          max-width: 100%;
+                          min-height: 100%;
+                          max-height: 100%;
+                          object-fit: cover;
+                        "
+                      />
+                    </div>
+                    <div
+                      class="flex flex-col justify-center items-center absolute w-full h-full top-0 z-50"
+                    >
+                      <img
+                        src="https://imagedelivery.net/oie13id8YpvudjA6JEtRCw/477a2bb8-2e0b-4cb9-4dff-c86b0d0d1a00/public"
+                        class="scheme-icon w-16 h-20"
+                      />
+                      <div class="w-1/2 text-center scheme-label-wrapper">
+                        <span
+                          class="font-segoe-bold uppercase text-gray-color scheme-label"
+                          >EjoHeza</span
+                        >
+                      </div>
+                      <div class="text-center scheme-description-wrapper px-4">
+                        <span
+                          class="font-segoe-regular capitalize text-low-gray-color scheme-description"
+                          >Start early and reap the rewards.</span
+                        >
+                      </div>
+                      <div class="mt-4 flex items-center flex-col scheme-btn">
+                        <div>
+                          <span
+                            class="uppercase font-segoe-regular text-white-color"
+                            >learn more</span
+                          >
+                        </div>
+                        <div class="bg-orange-color w-8 h-1"></div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div
+                class="bg-transparent border border-very-low-gray-color rounded undefined"
+              >
+                <a href="/scheme/maternity-leave">
+                  <div class="h-100 relative single-scheme cursor-pointer">
+                    <div
+                      class="scheme-overlay absolute z-10 block w-full h-full"
+                    ></div>
+                    <div
+                      style="
+                        display: inline-block;
+                        max-width: 100%;
+                        overflow: hidden;
+                        position: relative;
+                        box-sizing: border-box;
+                        margin: 0;
+                      "
+                    >
+                      <div
+                        style="
+                          box-sizing: border-box;
+                          display: block;
+                          max-width: 100%;
+                        "
+                      >
+                        <img
+                          style="
+                            max-width: 100%;
+                            display: block;
+                            margin: 0;
+                            border: none;
+                            padding: 0;
+                          "
+                          alt=""
+                          aria-hidden="true"
+                          role="presentation"
+                          src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwMCIgaGVpZ2h0PSI3NTAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmVyc2lvbj0iMS4xIi8+"
+                        />
+                      </div>
+                      <noscript
+                        ><img
+                          srcset="
+                            /_next/image?url=https%3A%2F%2Fimagedelivery.net%2Foie13id8YpvudjA6JEtRCw%2Fe7f675fc-0d6f-4560-e531-8111b3b94900%2Fpublic&amp;w=1080&amp;q=75 1x,
+                            /_next/image?url=https%3A%2F%2Fimagedelivery.net%2Foie13id8YpvudjA6JEtRCw%2Fe7f675fc-0d6f-4560-e531-8111b3b94900%2Fpublic&amp;w=2048&amp;q=75 2x
+                          "
+                          src="https://imagedelivery.net/oie13id8YpvudjA6JEtRCw/e7f675fc-0d6f-4560-e531-8111b3b94900/public"
+                          decoding="async"
+                          style="
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            bottom: 0;
+                            right: 0;
+                            box-sizing: border-box;
+                            padding: 0;
+                            border: none;
+                            margin: auto;
+                            display: block;
+                            width: 0;
+                            height: 0;
+                            min-width: 100%;
+                            max-width: 100%;
+                            min-height: 100%;
+                            max-height: 100%;
+                            object-fit: cover;
+                          "
+                          class="scheme-img" /></noscript
+                      ><img
+                        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                        decoding="async"
+                        class="scheme-img"
+                        style="
+                          position: absolute;
+                          top: 0;
+                          left: 0;
+                          bottom: 0;
+                          right: 0;
+                          box-sizing: border-box;
+                          padding: 0;
+                          border: none;
+                          margin: auto;
+                          display: block;
+                          width: 0;
+                          height: 0;
+                          min-width: 100%;
+                          max-width: 100%;
+                          min-height: 100%;
+                          max-height: 100%;
+                          object-fit: cover;
+                        "
+                      />
+                    </div>
+                    <div
+                      class="flex flex-col justify-center items-center absolute w-full h-full top-0 z-50"
+                    >
+                      <img
+                        src="https://imagedelivery.net/oie13id8YpvudjA6JEtRCw/5b8aa8e6-77e5-4178-1e17-11cfe2a07d00/public"
+                        class="scheme-icon w-16 h-20"
+                      />
+                      <div class="w-1/2 text-center scheme-label-wrapper">
+                        <span
+                          class="font-segoe-bold uppercase text-gray-color scheme-label"
+                          >Maternity Leave</span
+                        >
+                      </div>
+                      <div class="text-center scheme-description-wrapper px-4">
+                        <span
+                          class="font-segoe-regular capitalize text-low-gray-color scheme-description"
+                          >Enjoy your maternity leave with your full
+                          salary</span
+                        >
+                      </div>
+                      <div class="mt-4 flex items-center flex-col scheme-btn">
+                        <div>
+                          <span
+                            class="uppercase font-segoe-regular text-white-color"
+                            >learn more</span
+                          >
+                        </div>
+                        <div class="bg-orange-color w-8 h-1"></div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-gray-50">
+          <div class="mx-auto max-w-7xl px-6 lg:px-12">
+            <div
+              class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 lg:mx-0 lg:max-w-none lg:grid-cols-2"
+            >
+              <div class="lg:pr-8 lg:pt-4 h-full flex items-center">
+                <div class="lg:max-w-lg">
+                  <p
+                    class="mt-2 text-3xl font-segoe-bold tracking-tight text-gray-color sm:text-4xl sm:pr-8 2xl:pr-12"
+                  >
+                    Never miss your contributions again
+                  </p>
+                  <p
+                    class="mt-6 text-lg leading-8 text-low-gray-color font-segoe-regular"
+                  >
+                    <span class="text-orange-color font-segoe-bold mr-1"
+                      >Imisanzu</span
+                    >revolutionizes the way you manage your social security
+                    contributions. Access your information anytime, anywhere
+                    with ease and security. Enjoy convenience and transparency.
+                    Take control of your future and join Imisanzu today.
+                  </p>
+                  <div class="mt-8">
+                    <button
+                      class="styles__ButtonHolder-sc-ozfmvs-0 UYbnI cursor-pointer transition duration-300 focus:outline-none flex justify-center items-center"
+                    >
+                      <span
+                        class="styles__ButtonLabel-sc-ozfmvs-1 jPFmEZ font-segoe-bold capitalize text-base font-bold leading-6 tracking-normal"
+                        >Get Started</span
+                      >
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="h-full flex items-center">
+                <img
+                  src="https://imagedelivery.net/oie13id8YpvudjA6JEtRCw/15ac8c9b-e465-41fc-4c63-9a9a449b2a00/public"
+                  alt="Product screenshot"
+                  class="mt-4 sm:mt-0 sm:max-w-none sm:rounded-xl shadow-xl md:-ml-4 lg:-ml-0 h-auto sm:h-3/4"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="w-full overflow-hidden bg-white">
+          <section
+            class="pageContainer__PageContainer-sc-e39dws-0 eSVyWV py-10"
+          >
+            <div class="w-full flex flex-col my-8 content-wrap">
+              <div
+                class="digitalTransformationSection__Header-sc-1kmzomt-0 gSqeWD mb-12"
+              >
+                <h2 class="title-text font-segoe-bold mb-3 text-gray-color">
+                  Digital transformation
+                </h2>
+                <h4
+                  class="subtitle-text font-segoe-regular text-low-gray-color text-lg"
+                >
+                  A major focus for RSSB going into 2025 is to transform into a
+                  member first, <span class="text-orange-color"
+                    >data driven</span
+                  >, high performing organization and a big part of that is to
+                  complete its <span class="text-orange-color"
+                    >shift to digital</span
+                  >. 
+                </h4>
+              </div>
+              <div class="w-full flex flex-col lg:flex-row">
+                <div
+                  style="padding-right: 35px"
+                  class="w-full flex-1 mt-6 lg:mt-0"
+                >
+                  <div class="w-full flex flex-col">
+                    <div
+                      class="digitalTransformationPoint__HeadIconWrap-sc-1ko9f25-0 gesUmU text-center flex items-center content-center"
+                    >
+                      <i
+                        style="font-size: 24px; color: #23318a"
+                        class="w-full uc-icon"
+                        ></i
+                      >
+                    </div>
+                    <div
+                      class="digitalTransformationPoint__Body-sc-1ko9f25-1 kozFNG"
+                    >
+                      <p class="title-text font-segoe-bold text-gray-color">
+                        Changing from Legacy processes and systems
+                      </p>
+                      <p
+                        class="desc-text font-segoe-regular text-low-gray-color"
+                      >
+                        As we enter a new era of technology advances and
+                        data-driven business models, we are upgrading our
+                        systems and processes to gain in operational efficiency,
+                        address technology constraints, meet members experience
+                        expectations and support adoption and integration with
+                        other systems.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  style="padding-right: 35px"
+                  class="w-full flex-1 pr-0 sm:pr-8 mt-6 lg:mt-0"
+                >
+                  <div class="w-full flex flex-col">
+                    <div
+                      class="digitalTransformationPoint__HeadIconWrap-sc-1ko9f25-0 gesUmU text-center flex items-center content-center"
+                    >
+                      <i
+                        style="font-size: 24px; color: #23318a"
+                        class="w-full uc-icon"
+                        ></i
+                      >
+                    </div>
+                    <div
+                      class="digitalTransformationPoint__Body-sc-1ko9f25-1 kozFNG"
+                    >
+                      <p class="title-text font-segoe-bold text-gray-color">
+                        Non-paper based processes
+                      </p>
+                      <p
+                        class="desc-text font-segoe-regular text-low-gray-color"
+                      >
+                        We are moving away from the time-taking processes as we
+                        process large number of member&#x27;s claims. Members
+                        and partners will be enjoying the benefits such as
+                        timely and faster responses and reimbursements for their
+                        claims by reducing the time taken for processes to be
+                        completed.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  style="padding-right: 35px"
+                  class="w-full flex-1 pr-0 sm:pr-8 mt-6 lg:mt-0"
+                >
+                  <div class="w-full flex flex-col">
+                    <div
+                      class="digitalTransformationPoint__HeadIconWrap-sc-1ko9f25-0 gesUmU text-center flex items-center content-center"
+                    >
+                      <i
+                        style="font-size: 24px; color: #23318a"
+                        class="w-full uc-icon"
+                        ></i
+                      >
+                    </div>
+                    <div
+                      class="digitalTransformationPoint__Body-sc-1ko9f25-1 kozFNG"
+                    >
+                      <p class="title-text font-segoe-bold text-gray-color">
+                        Ensure the compliance rate in mandatory contributions
+                      </p>
+                      <p
+                        class="desc-text font-segoe-regular text-low-gray-color"
+                      >
+                        Digital-led compliance for private and public
+                        institutions to ensure the compliance and fraud
+                        monitoring. Our members will have a seamless and
+                        transparent access of their contributions/benefits via
+                        intelligent systems and notification ecosystem.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+        <section
+          class="pageContainer__PageContainer-sc-e39dws-0 eSVyWV bg-gray-50 py-24"
+        >
+          <div class="w-full content-wrap">
+            <div
+              class="quoteSection__SectionInnerWrap-sc-jvve4k-0 jRLuTo py-5 px-8 md:px-14"
+            >
+              <div class="flex flex-col">
+                <div>
+                  <p
+                    class="quoteSection__QuoteText-sc-jvve4k-1 eebGob text-xl xl:text-2xl font-segoe-regular mb-8"
+                  >
+                    “We have ambitious plans to transform RSSB, by 2025, into an
+                    organisation that is not just fully committed to delivering
+                    for our members but that puts members at the heart of all
+                    our planning and all our decision-making. Our vision is for
+                    RSSB to use all of its power and energy on behalf of our
+                    members: to be best-in-class in serving their interests, as
+                    a friend and source of help, as a modern, efficient
+                    organisation, with user-friendly, enabling technology; as a
+                    source of input to Government thinking; as a national and
+                    international thought-leader in social policy; as the
+                    leading strategic investor in our chosen markets; and as a
+                    prudent but ambitious business partner.&quot;
+                  </p>
+                  <div
+                    class="quoteSection__QuoteAuthor-sc-jvve4k-2 lnuNez flex items-center"
+                  >
+                    <div class="avatar-wrap mr-4">
+                      <div
+                        style="
+                          display: block;
+                          overflow: hidden;
+                          position: relative;
+                          box-sizing: border-box;
+                          margin: 0;
+                        "
+                      >
+                        <div
+                          style="
+                            display: block;
+                            box-sizing: border-box;
+                            padding-top: 100%;
+                          "
+                        ></div>
+                        <noscript
+                          ><img
+                            srcset="
+                              /_next/image?url=https%3A%2F%2Fimagedelivery.net%2Foie13id8YpvudjA6JEtRCw%2F380e16c5-e7ff-475c-ba66-48ba4e18b900%2Fpublic&amp;w=640&amp;q=75   640w,
+                              /_next/image?url=https%3A%2F%2Fimagedelivery.net%2Foie13id8YpvudjA6JEtRCw%2F380e16c5-e7ff-475c-ba66-48ba4e18b900%2Fpublic&amp;w=750&amp;q=75   750w,
+                              /_next/image?url=https%3A%2F%2Fimagedelivery.net%2Foie13id8YpvudjA6JEtRCw%2F380e16c5-e7ff-475c-ba66-48ba4e18b900%2Fpublic&amp;w=828&amp;q=75   828w,
+                              /_next/image?url=https%3A%2F%2Fimagedelivery.net%2Foie13id8YpvudjA6JEtRCw%2F380e16c5-e7ff-475c-ba66-48ba4e18b900%2Fpublic&amp;w=1080&amp;q=75 1080w,
+                              /_next/image?url=https%3A%2F%2Fimagedelivery.net%2Foie13id8YpvudjA6JEtRCw%2F380e16c5-e7ff-475c-ba66-48ba4e18b900%2Fpublic&amp;w=1200&amp;q=75 1200w,
+                              /_next/image?url=https%3A%2F%2Fimagedelivery.net%2Foie13id8YpvudjA6JEtRCw%2F380e16c5-e7ff-475c-ba66-48ba4e18b900%2Fpublic&amp;w=1920&amp;q=75 1920w,
+                              /_next/image?url=https%3A%2F%2Fimagedelivery.net%2Foie13id8YpvudjA6JEtRCw%2F380e16c5-e7ff-475c-ba66-48ba4e18b900%2Fpublic&amp;w=2048&amp;q=75 2048w,
+                              /_next/image?url=https%3A%2F%2Fimagedelivery.net%2Foie13id8YpvudjA6JEtRCw%2F380e16c5-e7ff-475c-ba66-48ba4e18b900%2Fpublic&amp;w=3840&amp;q=75 3840w
+                            "
+                            src="https://imagedelivery.net/oie13id8YpvudjA6JEtRCw/380e16c5-e7ff-475c-ba66-48ba4e18b900/public"
+                            decoding="async"
+                            style="
+                              position: absolute;
+                              top: 0;
+                              left: 0;
+                              bottom: 0;
+                              right: 0;
+                              box-sizing: border-box;
+                              padding: 0;
+                              border: none;
+                              margin: auto;
+                              display: block;
+                              width: 0;
+                              height: 0;
+                              min-width: 100%;
+                              max-width: 100%;
+                              min-height: 100%;
+                              max-height: 100%;
+                              object-fit: cover;
+                            " /></noscript
+                        ><img
+                          src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                          decoding="async"
+                          style="
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            bottom: 0;
+                            right: 0;
+                            box-sizing: border-box;
+                            padding: 0;
+                            border: none;
+                            margin: auto;
+                            display: block;
+                            width: 0;
+                            height: 0;
+                            min-width: 100%;
+                            max-width: 100%;
+                            min-height: 100%;
+                            max-height: 100%;
+                            object-fit: cover;
+                          "
+                        />
+                      </div>
+                    </div>
+                    <div class="flex flex-col">
+                      <span class="name-text mb-1 font-segoe-regular"
+                        >Regis RUGEMANSHURO</span
+                      ><span class="position-text font-segoe-regular"
+                        >CEO, RSSB</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div id="news" class="bg-white-color pt-16">
+          <div class="container mx-auto px-3.5 md:px-12 xl:px-30 2xl:px-36">
+            <div class="flex justify-center">
+              <div class="flex flex-col undefined">
+                <div class="flex items-center mb-4 false">
+                  <div class="bg-orange-color w-8 h-1"></div>
+                  <div class="ml-1.5">
+                    <span
+                      class="uppercase text-blue-color font-segoe-bold text-xl"
+                      >news &amp; events</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="grid grid-cols-1 gap-4 xl:grid-cols-3 xl:grid-rows-1 mt-12 pb-16"
+            >
+              <a
+                href="/rssb-engages-the-private-sector-on-pension-reforms-and-expected-benefits"
+              >
+                <div
+                  class="bg-transparent hover:border border-very-low-gray-color rounded single-blog cursor-pointer"
+                >
+                  <div
+                    style="
+                      display: inline-block;
+                      max-width: 100%;
+                      overflow: hidden;
+                      position: relative;
+                      box-sizing: border-box;
+                      margin: 0;
+                    "
+                  >
+                    <div
+                      style="
+                        box-sizing: border-box;
+                        display: block;
+                        max-width: 100%;
+                      "
+                    >
+                      <img
+                        style="
+                          max-width: 100%;
+                          display: block;
+                          margin: 0;
+                          border: none;
+                          padding: 0;
+                        "
+                        alt=""
+                        aria-hidden="true"
+                        role="presentation"
+                        src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwMCIgaGVpZ2h0PSI1NTAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmVyc2lvbj0iMS4xIi8+"
+                      />
+                    </div>
+                    <noscript
+                      ><img
+                        srcset="
+                          /_next/image?url=https%3A%2F%2Fimagedelivery.net%2Foie13id8YpvudjA6JEtRCw%2Ffe7f5f0d-4ebf-4a64-0c7c-d7b537c00f00%2Fpublic&amp;w=1080&amp;q=75 1x,
+                          /_next/image?url=https%3A%2F%2Fimagedelivery.net%2Foie13id8YpvudjA6JEtRCw%2Ffe7f5f0d-4ebf-4a64-0c7c-d7b537c00f00%2Fpublic&amp;w=2048&amp;q=75 2x
+                        "
+                        src="https://imagedelivery.net/oie13id8YpvudjA6JEtRCw/fe7f5f0d-4ebf-4a64-0c7c-d7b537c00f00/public"
+                        decoding="async"
+                        style="
+                          position: absolute;
+                          top: 0;
+                          left: 0;
+                          bottom: 0;
+                          right: 0;
+                          box-sizing: border-box;
+                          padding: 0;
+                          border: none;
+                          margin: auto;
+                          display: block;
+                          width: 0;
+                          height: 0;
+                          min-width: 100%;
+                          max-width: 100%;
+                          min-height: 100%;
+                          max-height: 100%;
+                          object-fit: cover;
+                        "
+                        class="blog-img" /></noscript
+                    ><img
+                      src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                      decoding="async"
+                      class="blog-img"
+                      style="
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        bottom: 0;
+                        right: 0;
+                        box-sizing: border-box;
+                        padding: 0;
+                        border: none;
+                        margin: auto;
+                        display: block;
+                        width: 0;
+                        height: 0;
+                        min-width: 100%;
+                        max-width: 100%;
+                        min-height: 100%;
+                        max-height: 100%;
+                        object-fit: cover;
+                      "
+                    />
+                  </div>
+                  <div class="px-4">
+                    <div class="mt-4">
+                      <span class="font-segoe-light text-low-gray-color text-sm"
+                        >8 months ago</span
+                      >
+                    </div>
+                    <div class="mt-4">
+                      <span class="text-gray-color text-lg font-segoe-bold"
+                        >RSSB Engages the Private Sector on Pension Reforms and
+                        <!-- -->...</span
+                      >
+                    </div>
+                    <div class="mt-4">
+                      <span
+                        class="text-low-gray-color text-base font-segoe-regular"
+                        ><p>
+                          Kigali: Thursday, November 28th, 2024 – The Rwanda
+                          Social Security Board (RSSB) engaged with the private
+                          sector to discuss upcoming pension reforms, h...
+                        </p></span
+                      >
+                    </div>
+                    <div class="bg-very-low-gray-color w-full h-0.4 mt-4"></div>
+                    <div class="mt-4">
+                      <span class="text-blue-color font-segoe-regular"
+                        >Read more ...</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a href="/rssb-champions-youth-basketball-in-ejo-heza-tournament">
+                <div
+                  class="bg-transparent hover:border border-very-low-gray-color rounded single-blog cursor-pointer"
+                >
+                  <div
+                    style="
+                      display: inline-block;
+                      max-width: 100%;
+                      overflow: hidden;
+                      position: relative;
+                      box-sizing: border-box;
+                      margin: 0;
+                    "
+                  >
+                    <div
+                      style="
+                        box-sizing: border-box;
+                        display: block;
+                        max-width: 100%;
+                      "
+                    >
+                      <img
+                        style="
+                          max-width: 100%;
+                          display: block;
+                          margin: 0;
+                          border: none;
+                          padding: 0;
+                        "
+                        alt=""
+                        aria-hidden="true"
+                        role="presentation"
+                        src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwMCIgaGVpZ2h0PSI1NTAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmVyc2lvbj0iMS4xIi8+"
+                      />
+                    </div>
+                    <noscript
+                      ><img
+                        srcset="
+                          /_next/image?url=https%3A%2F%2Fimagedelivery.net%2Foie13id8YpvudjA6JEtRCw%2Ff23503e2-8838-45fb-3714-8f76975d2600%2Fpublic&amp;w=1080&amp;q=75 1x,
+                          /_next/image?url=https%3A%2F%2Fimagedelivery.net%2Foie13id8YpvudjA6JEtRCw%2Ff23503e2-8838-45fb-3714-8f76975d2600%2Fpublic&amp;w=2048&amp;q=75 2x
+                        "
+                        src="https://imagedelivery.net/oie13id8YpvudjA6JEtRCw/f23503e2-8838-45fb-3714-8f76975d2600/public"
+                        decoding="async"
+                        style="
+                          position: absolute;
+                          top: 0;
+                          left: 0;
+                          bottom: 0;
+                          right: 0;
+                          box-sizing: border-box;
+                          padding: 0;
+                          border: none;
+                          margin: auto;
+                          display: block;
+                          width: 0;
+                          height: 0;
+                          min-width: 100%;
+                          max-width: 100%;
+                          min-height: 100%;
+                          max-height: 100%;
+                          object-fit: cover;
+                        "
+                        class="blog-img" /></noscript
+                    ><img
+                      src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                      decoding="async"
+                      class="blog-img"
+                      style="
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        bottom: 0;
+                        right: 0;
+                        box-sizing: border-box;
+                        padding: 0;
+                        border: none;
+                        margin: auto;
+                        display: block;
+                        width: 0;
+                        height: 0;
+                        min-width: 100%;
+                        max-width: 100%;
+                        min-height: 100%;
+                        max-height: 100%;
+                        object-fit: cover;
+                      "
+                    />
+                  </div>
+                  <div class="px-4">
+                    <div class="mt-4">
+                      <span class="font-segoe-light text-low-gray-color text-sm"
+                        >2 years ago</span
+                      >
+                    </div>
+                    <div class="mt-4">
+                      <span class="text-gray-color text-lg font-segoe-bold"
+                        >RSSB champions youth basketball in EjoHeza Tournament.<!-- -->...</span
+                      >
+                    </div>
+                    <div class="mt-4">
+                      <span
+                        class="text-low-gray-color text-base font-segoe-regular"
+                        ><p>
+                          On 14th January 2014, Rwanda Social Security Board
+                          (RSSB) participated in the 3x3 EjoHeza Tournament,
+                          collaboratively organized by partner basketball ...
+                        </p></span
+                      >
+                    </div>
+                    <div class="bg-very-low-gray-color w-full h-0.4 mt-4"></div>
+                    <div class="mt-4">
+                      <span class="text-blue-color font-segoe-regular"
+                        >Read more ...</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a href="/rssb-gets-data-controller-certification">
+                <div
+                  class="bg-transparent hover:border border-very-low-gray-color rounded single-blog cursor-pointer"
+                >
+                  <div
+                    style="
+                      display: inline-block;
+                      max-width: 100%;
+                      overflow: hidden;
+                      position: relative;
+                      box-sizing: border-box;
+                      margin: 0;
+                    "
+                  >
+                    <div
+                      style="
+                        box-sizing: border-box;
+                        display: block;
+                        max-width: 100%;
+                      "
+                    >
+                      <img
+                        style="
+                          max-width: 100%;
+                          display: block;
+                          margin: 0;
+                          border: none;
+                          padding: 0;
+                        "
+                        alt=""
+                        aria-hidden="true"
+                        role="presentation"
+                        src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwMCIgaGVpZ2h0PSI1NTAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmVyc2lvbj0iMS4xIi8+"
+                      />
+                    </div>
+                    <noscript
+                      ><img
+                        srcset="
+                          /_next/image?url=https%3A%2F%2Fimagedelivery.net%2Foie13id8YpvudjA6JEtRCw%2F3cfd23bf-fcb0-4908-c2f2-06bb8cdaec00%2Fpublic&amp;w=1080&amp;q=75 1x,
+                          /_next/image?url=https%3A%2F%2Fimagedelivery.net%2Foie13id8YpvudjA6JEtRCw%2F3cfd23bf-fcb0-4908-c2f2-06bb8cdaec00%2Fpublic&amp;w=2048&amp;q=75 2x
+                        "
+                        src="https://imagedelivery.net/oie13id8YpvudjA6JEtRCw/3cfd23bf-fcb0-4908-c2f2-06bb8cdaec00/public"
+                        decoding="async"
+                        style="
+                          position: absolute;
+                          top: 0;
+                          left: 0;
+                          bottom: 0;
+                          right: 0;
+                          box-sizing: border-box;
+                          padding: 0;
+                          border: none;
+                          margin: auto;
+                          display: block;
+                          width: 0;
+                          height: 0;
+                          min-width: 100%;
+                          max-width: 100%;
+                          min-height: 100%;
+                          max-height: 100%;
+                          object-fit: cover;
+                        "
+                        class="blog-img" /></noscript
+                    ><img
+                      src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                      decoding="async"
+                      class="blog-img"
+                      style="
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        bottom: 0;
+                        right: 0;
+                        box-sizing: border-box;
+                        padding: 0;
+                        border: none;
+                        margin: auto;
+                        display: block;
+                        width: 0;
+                        height: 0;
+                        min-width: 100%;
+                        max-width: 100%;
+                        min-height: 100%;
+                        max-height: 100%;
+                        object-fit: cover;
+                      "
+                    />
+                  </div>
+                  <div class="px-4">
+                    <div class="mt-4">
+                      <span class="font-segoe-light text-low-gray-color text-sm"
+                        >2 years ago</span
+                      >
+                    </div>
+                    <div class="mt-4">
+                      <span class="text-gray-color text-lg font-segoe-bold"
+                        >RSSB gets data controller certification<!-- -->...</span
+                      >
+                    </div>
+                    <div class="mt-4">
+                      <span
+                        class="text-low-gray-color text-base font-segoe-regular"
+                        ><p>
+                          The National Cyber Security Authority (NCSA) presented
+                          Rwanda Social Security Board (RSSB) with Data
+                          Controller certification, following the instituti...
+                        </p></span
+                      >
+                    </div>
+                    <div class="bg-very-low-gray-color w-full h-0.4 mt-4"></div>
+                    <div class="mt-4">
+                      <span class="text-blue-color font-segoe-regular"
+                        >Read more ...</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="py-12 w-full flex justify-center">
+              <button
+                class="styles__ButtonHolder-sc-ozfmvs-0 eCUKQC cursor-pointer transition duration-300 focus:outline-none flex justify-center items-center undefined"
+              >
+                <span
+                  class="styles__ButtonLabel-sc-ozfmvs-1 kzEnno font-segoe-bold capitalize text-base font-bold leading-6 tracking-normal"
+                  >view more</span
+                >
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section class="footer__FooterWrapper-sc-me85oq-0 bxbwrN pb-0">
+        <div class="footer-bg">
+          <div class="container mx-auto px-3.5 md:px-12 xl:px-30 2xl:px-36">
+            <div class="flex flex-col xl:flex-row justify-between py-12">
+              <div>
+                <div class="mb-6">
+                  <span class="uppercase text-gray-800 font-segoe-bold"
+                    >get in touch</span
+                  >
+                </div>
+                <div class="mb-1">
+                  <span
+                    class="text-gray-500 font-segoe-regular capitalize cursor-pointer"
+                    >KN 3 Rd African Union Boulevard</span
+                  >
+                </div>
+                <div class="mb-1">
+                  <span
+                    class="text-gray-500 font-segoe-regular capitalize cursor-pointer"
+                    >Kiyovu, Nyarugenge</span
+                  >
+                </div>
+                <div class="mb-1">
+                  <span
+                    class="text-gray-500 font-segoe-regular capitalize cursor-pointer"
+                    >P.O Box 250/6655 Kigali-Rwanda</span
+                  >
+                </div>
+                <div class="mb-1">
+                  <span
+                    class="text-gray-500 font-segoe-regular capitalize cursor-pointer"
+                    >Tel: 4044 Toll free line</span
+                  >
+                </div>
+                <div class="mb-1">
+                  <span
+                    class="text-gray-500 font-segoe-regular capitalize cursor-pointer"
+                    >&nbsp; &nbsp; &nbsp; 5006 EjoHeza</span
+                  >
+                </div>
+              </div>
+              <div>
+                <div class="mb-6">
+                  <span class="uppercase text-gray-800 font-segoe-bold"
+                    >Important Links</span
+                  >
+                </div>
+                <div class="mb-1">
+                  <span
+                    class="text-gray-500 font-segoe-regular capitalize cursor-pointer"
+                    ><a class="hover:underline" href="/publications#tenders"
+                      >Tenders</a
+                    ></span
+                  >
+                </div>
+                <div class="mb-1">
+                  <span
+                    class="text-gray-500 font-segoe-regular capitalize cursor-pointer"
+                    ><a
+                      class="hover:underline"
+                      target="_blank"
+                      href="https://www.flickr.com/photos/185734547@N05/"
+                      >Gallery</a
+                    ></span
+                  >
+                </div>
+                <div class="mb-1">
+                  <span
+                    class="text-gray-500 font-segoe-regular capitalize cursor-pointer"
+                    ><a
+                      class="hover:underline"
+                      href="/publications#announcements"
+                      >Announcements</a
+                    ></span
+                  >
+                </div>
+                <div class="mb-1">
+                  <span
+                    class="text-gray-500 font-segoe-regular capitalize cursor-pointer"
+                    ><a class="hover:underline" href="/privacy-policy"
+                      >Privacy Policy</a
+                    ></span
+                  >
+                </div>
+              </div>
+              <div>
+                <div class="mb-6">
+                  <span class="uppercase text-gray-800 font-segoe-bold"
+                    >services</span
+                  >
+                </div>
+                <div class="mb-1">
+                  <span
+                    class="text-gray-500 font-segoe-regular capitalize cursor-pointer"
+                    ><a
+                      class="hover:underline"
+                      target="_blank"
+                      href="https://online.rssb.rw"
+                      >Apply for employee number</a
+                    ></span
+                  >
+                </div>
+                <div class="mb-1">
+                  <span
+                    class="text-gray-500 font-segoe-regular capitalize cursor-pointer"
+                    ><a
+                      class="hover:underline"
+                      target="_blank"
+                      href="https://www.imisanzu.rssb.rw/"
+                      >Check for your contributions</a
+                    ></span
+                  >
+                </div>
+                <div class="mb-1">
+                  <span
+                    class="text-gray-500 font-segoe-regular capitalize cursor-pointer"
+                    ><a
+                      class="hover:underline"
+                      target="_blank"
+                      href="https://www.ishema.rssb.rw/"
+                      >Pay employee contributions</a
+                    ></span
+                  >
+                </div>
+                <div class="mb-1">
+                  <span
+                    class="text-gray-500 font-segoe-regular capitalize cursor-pointer"
+                    ><a class="hover:underline" href="/?pensionSimulator=true"
+                      >Pension simulator</a
+                    ></span
+                  >
+                </div>
+                <div class="mb-1">
+                  <span
+                    class="text-gray-500 font-segoe-regular capitalize cursor-pointer"
+                    ><a
+                      class="hover:underline"
+                      target="_blank"
+                      href="https://www.ishema.rssb.rw/"
+                      >RSSB clearance certificate</a
+                    ></span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bg">
+          <div class="container mx-auto px-3.5 md:px-12 xl:px-30 2xl:px-36">
+            <div
+              class="flex py-4 justify-between items-center border-t border-gray-300"
+            >
+              <div>
+                <span class="text-gray-600 font-segoe-regular"
+                  >©
+                  <!-- -->2025<!-- -->
+                  Rwanda Social Security Board</span
+                >
+              </div>
+              <div id="social-icons" class="items-center"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
   </body>
 </html>
