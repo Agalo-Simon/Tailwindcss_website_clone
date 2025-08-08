@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RSSB</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="shortcut icon" href="/src/rssb-cut-logo.png" type="image/x-icon">
+  </head>
+  <body>
+       <header class="shadow-sm">
+        <!-- Top Bar: Socials and Publications -->
+        <nav class="bg-blue-100 p-4 md:px-8 border-b border-gray-200">
+            <div class="container mx-auto flex flex-col md:flex-row items-center justify-between">
+                <!-- Social Media Icons -->
+                <div class="flex items-center space-x-4 mb-4 md:mb-0 text-blue-900">
+                    <a href="#" class="hover:text-blue-500 transition-colors duration-200" aria-label="LinkedIn">
+                        <img src="rssb-cut-logo" alt="">
+                    </a>
+                    <a href="#" class="hover:text-blue-500 transition-colors duration-200" aria-label="Twitter">
+                        <img src="/src/assets/public 2.svg" class="w-5 h-5" alt="">
+                    </a>
+                    <a href="#" class="hover:text-blue-500 transition-colors duration-200" aria-label="Facebook">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-facebook"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                    </a>
+                    <a href="#" class="hover:text-blue-500 transition-colors duration-200" aria-label="Instagram">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37a4 4 0 1 1-4.73-4.73A4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+                    </a>
+                </div>
+
+                <!-- Online Services & Publications -->
+                <div class="relative flex items-center space-x-6 text-sm text-blue-900">
+                    <div class="relative">
+                        <button id="online-services-btn" class="flex items-center space-x-1 font-semibold rounded-md p-2 hover:bg-gray-100 transition-colors duration-200">
+                            <span>Online Services</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down"><path d="m6 9 6 6 6-6"/></svg>
+                        </button>
+                        <!-- Dropdown Menu -->
+                        <div id="online-services-dropdown" class="hidden absolute right-0 mt-2 w-48 bg-white border border-gray-200 rounded-md shadow-lg z-10">
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Service 1</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Service 2</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Service 3</a>
+                        </div>
+                    </div>
+                    <a href="#" class="font-semibold hover:text-blue-500 transition-colors duration-200">
+                        Publications
+                    </a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Middle Bar: Logo and Contact Info -->
+        <div class="container mx-auto p-4 md:px-8 flex flex-col md:flex-row items-center justify-between my-4">
+            <!-- RSSB Logo -->
+            <div class="flex items-center space-x-4 mb-4 md:mb-0">
+                <img src="assets/rssb-cut-logo.png" alt="RSSB Logo" class="h-20 w-20 rounded-full">
+                <div class="flex flex-col text-blue-900">
+                    <span class="font-bold text-xl">RSSB</span>
+                    <span class="text-md">Our Health</span>
+                    <span class="text-md">Our Future</span>
+                </div>
+            </div>
+            
+            <!-- Contact Info -->
+            <div class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-8 text-sm text-blue-900">
+                <div class="flex items-center space-x-2 p-3 bg-gray-100 rounded-lg shadow-sm">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone text-blue-600"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    <div>
+                        <span class="font-semibold text-lg block">4044</span>
+                        <span class="text-gray-600 block">Toll free lines</span>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-2 p-3 bg-gray-100 rounded-lg shadow-sm">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail text-blue-600"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                    <div>
+                        <span class="font-semibold text-lg block">info@rssb.rw</span>
+                        <span class="text-gray-600 block">Reach to us</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Bar: Main Navigation -->
+        <nav class="bg-blue-900 px-4 md:px-8">
+            <div class="container mx-auto">
+                <ul class="flex flex-wrap justify-center md:justify-start space-x-4 md:space-x-8 text-white text-sm font-semibold">
+                    <!-- Navigation links -->
+                    <li class="relative py-4">
+                        <a href="#" class="pb-4 hover:text-blue-200 transition-colors duration-200 block">
+                            HOME
+                        </a>
+                        <!-- Active link indicator -->
+                        <div class="absolute bottom-0 left-0 right-0 h-1 bg-orange-500 rounded-t-md"></div>
+                    </li>
+                    <li class="relative py-4">
+                        <a href="#" class="pb-4 hover:text-blue-200 transition-colors duration-200 block">
+                            SCHEMES
+                        </a>
+                    </li>
+                    <li class="relative py-4">
+                        <a href="#" class="pb-4 hover:text-blue-200 transition-colors duration-200 block">
+                            INVESTMENT
+                        </a>
+                    </li>
+                    <li class="relative py-4">
+                        <a href="#" class="pb-4 hover:text-blue-200 transition-colors duration-200 block">
+                            MANAGEMENT
+                        </a>
+                    </li>
+                    <li class="relative py-4">
+                        <a href="#" class="pb-4 hover:text-blue-200 transition-colors duration-200 block">
+                            ABOUT
+                        </a>
+                    </li>
+                    <li class="relative py-4">
+                        <a href="#" class="pb-4 hover:text-blue-200 transition-colors duration-200 block">
+                            CAREERS
+                        </a>
+                    </li>
+                    <li class="relative py-4">
+                        <a href="#" class="pb-4 hover:text-blue-200 transition-colors duration-200 block">
+                            NEWS & EVENTS
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+  </body>
+</html>
